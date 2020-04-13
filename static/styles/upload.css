@@ -1,0 +1,63 @@
+body {
+	background-image:url('../background.png');
+    background-size: 100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.container {
+}
+.Header {
+	font-size: 50px;
+	color: #ffffff;
+	margin-top: 200px;
+	text-align: center;
+}
+
+.HEX {
+	font-size: 50px;
+	color: #b1dede;
+	display: inline-block;
+
+
+}
+
+
+
+.text {
+	text-align: center;
+	 margin-top: 70px;
+	font-size: 28px;
+	color: #ffffff;
+}
+
+.label {
+	font-size: 36px;
+	color: #b1dede;
+	text-decoration: underline;
+
+	-webkit-text-underline-position: under;
+	  -ms-text-underline-position: below;
+	  text-underline-position: under; 
+
+}
+
+.upload_button {
+	margin-left: 310px;
+	margin-top: 20px;
+ 	background-color: rgba(74,112,112,0.8);
+	color: white;
+	padding:15px 80px;
+	text-align: center;
+	display: inline-block;
+	font-size: 55px;
+	border: 7px solid white;
+}
+
+.upload_button:hover{
+	background-color: #5dcece; 
+	background-color: rgba(93,206,206,0.8);
+}

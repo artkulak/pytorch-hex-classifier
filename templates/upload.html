@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>HEX Classifier</title>
+
+	<link rel="stylesheet" href="{{ url_for('static',filename='styles/upload.css') }}">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body> 
+
+	<div class="container">
+		<div class="col">
+			<div class="row Header">
+				<div class="HEX">HEX</div> CLASSIFIER
+			</div>
+		<div class="row upload">
+			<form method="post" action="/" enctype="multipart/form-data">
+			    <dl>
+					<p>
+						<input id="realBtn" type="file" name="file" autocomplete="off" required onchange="form.submit()" style="display:none">
+					</p>
+			    </dl>
+			    <p>
+					<input id="customBtn" class="upload_button" type="submit" value="UPLOAD FILE">
+				</p>
+			</form>
+		</div>
+		<div class="row text">
+
+			{% with messages = get_flashed_messages() %}
+			  {% if messages %}
+				The type of your file is: <div style="font-size: 36px; color: #b1dede; text-transform: uppercase;" class="label">{{ messages[0] }}</div>
+			  {% endif %}
+			{% endwith %}
+		</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		const realBtn = document.getElementById("realBtn");
+		const customBtn = document.getElementById("customBtn");
+
+		customBtn.addEventListener("click", function(){
+			realBtn.click();
+		});
+	</script>
+
+</body>
+</html>
